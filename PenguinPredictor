@@ -1,0 +1,60 @@
+# imports
+import os
+import random
+from time import sleep
+
+# os stuff
+USERNAME = os.getenv("USERNAME")
+os.system("color a")
+
+# ascii intro
+print("""
+██████╗░██████╗░███████╗██████╗░██╗░█████╗░████████╗░█████╗░██████╗░
+██╔══██╗██╔══██╗██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝██╔══██╗██╔══██╗
+██████╔╝██████╔╝█████╗░░██║░░██║██║██║░░╚═╝░░░██║░░░██║░░██║██████╔╝
+██╔═══╝░██╔══██╗██╔══╝░░██║░░██║██║██║░░██╗░░░██║░░░██║░░██║██╔══██╗
+██║░░░░░██║░░██║███████╗██████╔╝██║╚█████╔╝░░░██║░░░╚█████╔╝██║░░██║
+╚═╝░░░░░╚═╝░░╚═╝╚══════╝╚═════╝░╚═╝░╚════╝░░░░╚═╝░░░░╚════╝░╚═╝░░╚═╝
+""")
+
+# greetings and welcomes
+print("Hello", USERNAME + ", welcome to Penguin Predictor! I hope this works for you. :)))")
+print("PenguinPredictor V1 [1.00] (A Bloxflip/Roobet/Stake/Guru etc mines predictor!)")
+
+def main():
+    # randomization
+    line_one = ["@�🟥🟥🟥", "🟥@�🟥🟥", "🟥🟥@�🟥", "🟥🟥🟥@�", "🟥🟥🟥🟥@", "🟥🟥🟥🟥🟥"]
+    line_two = ["@🟥🟥🟥", "🟥@�🟥🟥", "🟥🟥@�🟥", "🟥🟥🟥@�", "🟥🟥🟥🟥@", "🟥🟥🟥🟥🟥"]
+    line_three = ["@�🟥🟥🟥", "🟥@�🟥🟥", "🟥🟥@�🟥", "🟥🟥🟥@🟥"🟥🟥🟥🟥@", "🟥🟥🟥🟥🟥"]
+    line_four = ["@�🟥🟥🟥", "🟥@🟥🟥", "🟥🟥@�🟥", "🟥🟥🟥@🟥", "🟥🟥🟥🟥@", "🟥🟥🟥🟥🟥"]
+    line_five = ["@�🟥🟥🟥", "🟥@�🟥🟥", "🟥🟥@�🟥", "🟥🟥🟥@🟥", "🟥🟥🟥🟥@", "🟥🟥🟥🟥🟥"]
+    for i in range(1, 6):
+        print("Penguin is thinking... Attempts:", i, "...")
+        sleep(1)
+    for j in range(1, 4):
+        print("⬇⬇⬇⬇⬇⬇⬇⬇⬇")
+    sleep(1)
+    print(line_one[random.randint(0, 5)])
+    sleep(1)
+    print(line_two[random.randint(0, 5)])
+    sleep(1)
+    print(line_three[random.randint(0, 5)])
+    sleep(1)
+    print(line_four[random.randint(0, 5)])
+    sleep(1)
+    print(line_five[random.randint(0, 5)])
+    sleep(1)
+    print("Please note. This bot is not 100% accurate, the algorithm works best when you have 1-3 bombs.")
+    print("I hope this works for you! :)))")
+    print("Predicted accuracy of this guess:", random.randint(20, 100), "%.")
+    print("(the @'s are the good places to pick)")
+    works = input("Did this bot work for you? Y/N >>> ").lower()
+    if works == "yes" or works == "y":
+        print("I'm glad to hear this! I hope the next one works too. :)))")
+    elif works == "no" or works == "n":
+        print("We are sorry to hear this. :( Maybe next one will work?")
+    else:
+        print("That was an invalid input. Anyway, I hope it worked!")
+    
+while True:
+    main()
